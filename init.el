@@ -79,8 +79,5 @@
 ;;   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;; load custom key bindings
-(if (file-exists-p (concat user-specific-dir "/key-bindings.el"))
-    (load (concat user-specific-dir "/key-bindings.el"))
- )
 
 ;;; init.el ends here

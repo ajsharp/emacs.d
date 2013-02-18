@@ -278,3 +278,7 @@
 ;;   (after track-last-eproject-root activate)
 ;;   (message "On next window!")
 ;;   (message eproject-root))
+
+(if (file-exists-p (concat user-specific-dir "/key-bindings.el"))
+    (load (concat user-specific-dir "/key-bindings.el"))
+  )
