@@ -17,10 +17,12 @@
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum")
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum+")
 
-(require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-initialize)
-(color-theme-tomorrow-night)
+;; (require 'color-theme)
+;; (setq color-theme-is-global t)
+
+;; (color-theme-initialize)
+;; (color-theme-tomorrow-night)
+(load-theme 'twilight t)
 ;; (require 'linum)
 ;; (require 'linum+)
 (require 'paredit)
