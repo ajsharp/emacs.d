@@ -73,12 +73,14 @@
 
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
-(if (file-exists-p user-specific-dir)
-  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+
+;; load all files ending in .el in user-specific-dire
+;; (if (file-exists-p user-specific-dir)
+;;   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;; load custom key bindings
 (if (file-exists-p (concat user-specific-dir "/key-bindings.el"))
     (load (concat user-specific-dir "/key-bindings.el"))
-    )
+ )
 
 ;;; init.el ends here
