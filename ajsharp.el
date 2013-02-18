@@ -34,6 +34,7 @@
 ;; (require 'scala-mode)
 (require 'smooth-scrolling)
 ;; (require 'centered-cursor-mode)
+(require 'browse-kill-ring)
 
 ;; ==== company mode
 ;; (require 'company-mode)
