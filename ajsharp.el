@@ -50,8 +50,12 @@
 (add-hook 'ruby-mode-hook 'yard-mode)
 (add-hook 'ruby-mode-hook 'eldoc-mode)
 (add-hook 'ruby-mode-hook 'ruby-interpolation)
-
-;; (ruby-electric-mode t)
+(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+(add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'yard-mode)
+(add-hook 'enh-ruby-mode-hook 'eldoc-mode)
+(add-hook 'enh-ruby-mode-hook 'ruby-interpolation)
 
 (define-key ruby-mode-map (kbd "M-q") 'ruby-indent-exp)
 
