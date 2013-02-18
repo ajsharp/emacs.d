@@ -5,13 +5,10 @@
   (package-initialize))
 
 ;; ===== Package Management
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" .
-               "http://marmalade-repo.org/packages/"))
+;; (require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (add-to-list 'load-path "~/.emacs.d/ajsharp/auto-complete")
 ;;(add-to-list 'load-path "~/.emacs.d/plugins/nav")
@@ -20,9 +17,9 @@
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum")
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum+")
 
-;; (require 'color-theme)
+(require 'color-theme)
 (setq color-theme-is-global t)
-;; (color-theme-initialize)
+(color-theme-initialize)
 (color-theme-tomorrow-night)
 ;; (require 'linum)
 ;; (require 'linum+)
@@ -39,8 +36,8 @@
 ;; (require 'centered-cursor-mode)
 
 ;; ==== company mode
-;;(require 'company-mode)
-;;(autoload 'company-mode "company" nil t)
+;; (require 'company-mode)
+;; (autoload 'company-mode "company" nil t)
 ;; (push 'company-robe company-backends)
 
 ;; ===== ruby configuration
@@ -51,18 +48,17 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'ruby-mode-hook 'yard-mode)
 (add-hook 'ruby-mode-hook 'eldoc-mode)
-;; (add-hook 'ruby-mode-hook 'ruby-interpolation)
+(add-hook 'ruby-mode-hook 'ruby-interpolation)
 
 ;; (ruby-electric-mode t)
 
 (define-key ruby-mode-map (kbd "M-q") 'ruby-indent-exp)
 
 ;;(require 'ruby-test-mode)
-;;(add-to-list 'load-path "/Users/ajsharp/.emacs.d/elpa/enh-ruby-mode-20121204.1623/")
-;;(setq enh-ruby-program "/Users/ajsharp/.rvm/rubies/ruby-1.9.3-p194/bin/ruby")
-;;(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-;; (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-;; (add-to-list 'interpeter-mode-alist '("ruby" . enh-ruby-mode))
+(setq enh-ruby-program "/Users/ajsharp/.rvm/rubies/ruby-1.9.3-p194/bin/ruby")
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
 
 ;; ===== RSPEC MODE
@@ -251,9 +247,6 @@
           (replace-match "" nil nil))))))
 
 (global-set-key (kbd "M-\\") 'kill-whitespace)
-
-
-;; Ruby
 
 ;; CoffeeScript
 (add-to-list 'load-path "~/.emacs.d/ajsharp/coffee-mode")
