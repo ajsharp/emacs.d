@@ -1,4 +1,4 @@
-ac-comphis.dat
+ac-comphist.dat
 auto-save-list
 backups
 *.elc
@@ -7,3 +7,4 @@ url
 places
 tramp
 *archive-contents*
+.smex-items
