@@ -221,7 +221,7 @@
 ; (global-set-key (kbd "C-w") 'backward-kill-word)
 (define-key paredit-mode-map (kbd "C-w") 'paredit-backward-kill-word)
 (global-set-key (kbd "M-i") 'indent-buffer)
-(global-set-key (kbd "M-DEL") 'kill-region)
+(global-set-key (kbd "M-DEL") 'backward-kill-word)
 (define-key paredit-mode-map (kbd "M-DEL") 'kill-region)
 
 
