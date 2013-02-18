@@ -53,32 +53,30 @@
 (add-hook 'ruby-mode-hook 'eldoc-mode)
 (add-hook 'ruby-mode-hook 'ruby-interpolation)
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
-(add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
-(add-hook 'enh-ruby-mode-hook 'yard-mode)
-(add-hook 'enh-ruby-mode-hook 'eldoc-mode)
-(add-hook 'enh-ruby-mode-hook 'ruby-interpolation)
-
-(define-key ruby-mode-map (kbd "M-q") 'ruby-indent-exp)
 
 ;;(require 'ruby-test-mode)
 (setq enh-ruby-program "/Users/ajsharp/.rvm/rubies/ruby-1.9.3-p194/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'yard-mode)
+(add-hook 'enh-ruby-mode-hook 'eldoc-mode)
+(add-hook 'enh-ruby-mode-hook 'ruby-interpolation)
 
 
 ;; ===== RSPEC MODE
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/rspec-mode")
-(require 'rspec-mode)
-(setq rspec-use-rake-flag nil)
-(setq rspec-use-rvm t)
-
-(add-hook 'ruby-mode-hook
-          (lambda () (local-set-key rspec-key-command-prefix rspec-mode-keymap))
-            'rspec-mode)
-
-(eval-after-load "color-theme" '(color-theme-tomorrow-night))
+;; (require 'rspec-mode)
+;; (setq rspec-use-rake-flag nil)
+;; (setq rspec-use-rvm t)
+;; 
+;; (add-hook 'ruby-mode-hook
+;;           (lambda () (local-set-key rspec-key-command-prefix rspec-mode-keymap))
+;;             'rspec-mode)
+;; 
+;; (eval-after-load "color-theme" '(color-theme-tomorrow-night))
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/ajsharp/auto-complete")
