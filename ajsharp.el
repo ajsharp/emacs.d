@@ -52,19 +52,21 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'ruby-mode-hook 'yard-mode)
 (add-hook 'ruby-mode-hook 'eldoc-mode)
-(add-hook 'ruby-mode-hook 'ruby-interpolation)
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
+
 
 ;;(require 'ruby-test-mode)
 (setq enh-ruby-program "/Users/ajsharp/.rvm/rubies/ruby-1.9.3-p194/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+
 (add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'yard-mode)
 (add-hook 'enh-ruby-mode-hook 'eldoc-mode)
-(add-hook 'enh-ruby-mode-hook 'ruby-interpolation)
+(add-hook 'enh-ruby-mode-hook 'ruby-tools-mode)
+(add-hook 'enh-ruby-mode-hook 'ruby-interpolation-mode)
 
 
 ;; ===== RSPEC MODE
