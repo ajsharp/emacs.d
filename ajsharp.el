@@ -205,18 +205,8 @@
 (setq yas/root-directory "~/.emacs.d/snippets/")
 (yas/load-directory yas/root-directory)
 
-(defun kill-whitespace ()
-  "Kill the whitespace between two non-whitespace characters"
-  (interactive "*")
-  (save-excursion
-    (save-restriction
-      (save-match-data
-        (progn
-          (re-search-backward "[^ \t\r\n]" nil t)
-          (re-search-forward "[ \t\r\n]+" nil t)
-          (replace-match "" nil nil))))))
+(global-set-key (kbd "M-\\") 'delete-horizontal-space)
 
-(global-set-key (kbd "M-\\") 'kill-whitespace)
 
 ;; CoffeeScript
 (add-to-list 'load-path "~/.emacs.d/ajsharp/coffee-mode")
