@@ -67,6 +67,7 @@
 (add-hook 'enh-ruby-mode-hook 'eldoc-mode)
 (add-hook 'enh-ruby-mode-hook 'ruby-tools-mode)
 (add-hook 'enh-ruby-mode-hook 'ruby-interpolation-mode)
+(add-hook 'enh-ruby-mode-hook 'whitespace-mode)
 
 
 ;; ===== RSPEC MODE
