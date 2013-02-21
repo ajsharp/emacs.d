@@ -30,6 +30,11 @@
 (require 'clojure-mode)
 (require 'yasnippet)
 (require 'ruby-mode)
+(require 'ruby-compilation)
+(require 'rinari)
+(require 'ido)
+(ido-mode t)
+
 (eval-after-load "ruby-mode" '(require 'ruby-mode-indent-fix))
 (require 'eproject)
 (require 'eproject-extras)
@@ -38,6 +43,8 @@
 (require 'smooth-scrolling)
 ;; (require 'centered-cursor-mode)
 (require 'browse-kill-ring)
+
+(global-rinari-mode)
 
 ;; ==== company mode
 ;; (require 'company-mode)
@@ -53,6 +60,9 @@
 (add-hook 'ruby-mode-hook 'yard-mode)
 (add-hook 'ruby-mode-hook 'eldoc-mode)
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
+(add-hook 'ruby-mode-hook 'enh-ruby-mode)
+
+(add-to-list 'auto-mode-alist '("\\.bldr$" . ruby-mode))
 
 
 ;;(require 'ruby-test-mode)
