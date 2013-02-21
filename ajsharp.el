@@ -10,7 +10,6 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/ajsharp/auto-complete")
 ;;(add-to-list 'load-path "~/.emacs.d/plugins/nav")
 (add-to-list 'load-path "~/.emacs.d/ajsharp/anything")
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/scala-mode")
@@ -101,12 +100,6 @@
 ;;             'rspec-mode)
 ;; 
 ;; (eval-after-load "color-theme" '(color-theme-tomorrow-night))
-
-;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/ajsharp/auto-complete")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ajsharp/auto-complete/ac-dict")
-(ac-config-default)
 
 ;; coffeescript
 (require 'flymake-coffee)
