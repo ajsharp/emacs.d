@@ -79,6 +79,11 @@
 (add-hook 'enh-ruby-mode-hook 'ruby-interpolation-mode)
 (add-hook 'enh-ruby-mode-hook 'whitespace-mode)
 
+;; CSS / Sass
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+(autoload 'css-mode "css-mode" nil t)
+
 
 ;; MMM Mode
 (require 'mmm-auto)
@@ -267,6 +272,18 @@
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
 ;; CSS
+
+(defun my-html-mode-hook ()
+  (setq tab-width 2)
+  (setq indent-tabs-mode t)
+  (define-key html-mode-map (kbd "<tab>") 'my-insert-tab)
+  (define-key html-mode-map (kbd "C->") 'sgml-close-tag))
+
+(defun my-insert-tab (&optional arg)
+  (interactive "P")
+  (insert-tab arg))
+
+(add-hook 'html-mode-hook 'my-html-mode-hook)
 
 
 ;; (custom-set-variables
