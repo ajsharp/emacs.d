@@ -80,6 +80,11 @@
 (add-hook 'enh-ruby-mode-hook 'whitespace-mode)
 
 
+;; MMM Mode
+(require 'mmm-auto)
+(setq mmm-global-mode 'maybe)
+(mmm-add-mode-ext-class 'mmm-erb "\\.erb\\'" 'mmm-erb)
+
 ;; ===== RSPEC MODE
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/rspec-mode")
 ;; (require 'rspec-mode)
