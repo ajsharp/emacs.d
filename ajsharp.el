@@ -88,6 +88,20 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ajsharp/auto-complete/ac-dict")
 (ac-config-default)
 
+;; coffeescript
+(require 'flymake-coffee)
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
+(setq coffee-tab-width 2)
+(defun coffee-custom ()
+  "coffee-mode-hook"
+  (set (make-local-variable 'tab-width) 2))
+
+(add-hook 'coffee-mode-hook
+            '(lambda () (coffee-custom)))
+
+(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
+
 ;; ===== anything configuration
 (require 'anything)
 (require 'anything-config)
@@ -207,11 +221,6 @@
 (yas/load-directory yas/root-directory)
 
 (global-set-key (kbd "M-\\") 'delete-horizontal-space)
-
-
-;; CoffeeScript
-(add-to-list 'load-path "~/.emacs.d/ajsharp/coffee-mode")
-(require 'coffee-mode)
 
 
 ;; dirtree
