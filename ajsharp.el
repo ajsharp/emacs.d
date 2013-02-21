@@ -34,6 +34,8 @@
 (require 'ido)
 (ido-mode t)
 
+(column-number-mode)
+
 (eval-after-load "ruby-mode" '(require 'ruby-mode-indent-fix))
 (require 'eproject)
 (require 'eproject-extras)
