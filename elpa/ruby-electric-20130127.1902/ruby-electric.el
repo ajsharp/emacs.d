@@ -84,7 +84,7 @@ strings. Note that you must have Font Lock enabled."
   (define-key ruby-mode-map "\'" 'ruby-electric-quote)
   (define-key ruby-mode-map "|" 'ruby-electric-bar)
   (define-key ruby-mode-map (kbd "RET") 'ruby-electric-return)
-  (define-key ruby-mode-map (kbd "C-j") 'ruby-electric-return)
+  ;; (define-key ruby-mode-map (kbd "C-j") 'ruby-electric-return)
   (define-key ruby-mode-map (kbd "C-m") 'ruby-electric-return)
   (define-key ruby-mode-map "}" 'ruby-electric-close-matching-char)
   (define-key ruby-mode-map ")" 'ruby-electric-close-matching-char)
