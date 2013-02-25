@@ -83,6 +83,8 @@
 (add-hook 'enh-ruby-mode-hook 'whitespace-mode)
 (add-hook 'enh-ruby-mode-hook 'auto-complete-mode)
 
+(setq ruby-deep-indent-paren nil)
+
 ;; CSS / Sass
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
