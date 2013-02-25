@@ -47,6 +47,9 @@
 
 (global-rinari-mode)
 
+(require 'auto-complete)
+(auto-complete-mode)
+
 ;; ==== company mode
 ;; (require 'company-mode)
 ;; (autoload 'company-mode "company" nil t)
@@ -65,7 +68,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.bldr$" . ruby-mode))
 
-
 ;;(require 'ruby-test-mode)
 (setq enh-ruby-program "/Users/ajsharp/.rvm/rubies/ruby-1.9.3-p194/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
@@ -79,6 +81,7 @@
 (add-hook 'enh-ruby-mode-hook 'ruby-tools-mode)
 (add-hook 'enh-ruby-mode-hook 'ruby-interpolation-mode)
 (add-hook 'enh-ruby-mode-hook 'whitespace-mode)
+(add-hook 'enh-ruby-mode-hook 'auto-complete-mode)
 
 ;; CSS / Sass
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
