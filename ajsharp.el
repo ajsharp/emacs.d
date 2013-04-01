@@ -254,9 +254,10 @@
 
 ;; vendor stuff
 (add-to-list 'load-path "~/.emacs.d/vendor")
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 
-;; (require 'textmate)
-;; (textmate-mode)
+(require 'textmate)
+(textmate-mode)
 ;; (global-set-key (kbd "M-T") 'textmate-goto-file)
 
 ;; ido
