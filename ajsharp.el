@@ -16,6 +16,8 @@
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum")
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum+")
 
+(setq require-final-newline t)
+
 (require 'color-theme)
 (setq color-theme-is-global t)
 
