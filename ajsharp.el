@@ -1,14 +1,7 @@
-;; ELPA
-(when
-    (load
-     (expand-file-name "~/.emacs.d/package.el"))
-  (package-initialize))
 
 ;; ===== Package Management
-;; (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
 
 ;;(add-to-list 'load-path "~/.emacs.d/plugins/nav")
 (add-to-list 'load-path "~/.emacs.d/ajsharp/anything")
