@@ -296,10 +296,23 @@
 ;;   ;; If there is more than one, they won't work right.
 ;;  '(next-screen-context-lines 4))
 
-(setq
- scroll-margin 5)
+(setq scroll-margin 5)
 
+;; ====== js mode setup
+(add-hook 'js2-mode-hook 'js2-imenu-extras-mode)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(add-hook 'after-init-hook
+          #'(lambda ()
+              (when (locate-library "slime-js")
+                (require 'setup-slime-js)
+                )))
+
+(global-set-key [f5] 'slime-js-reload)
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (slime-js-minor-mode 1)))
 
 ;; (defadvice next-window
 ;;   (after track-last-eproject-root activate)
