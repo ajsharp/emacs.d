@@ -9,6 +9,8 @@
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum")
 ;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum+")
 
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
 (setq require-final-newline t)
 
 (require 'color-theme)
