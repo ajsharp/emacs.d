@@ -33,6 +33,9 @@
 (require 'ido)
 (ido-mode t)
 
+(require 'slime)
+(slime-setup)
+
 (column-number-mode)
 
 (eval-after-load "ruby-mode" '(require 'ruby-mode-indent-fix))
