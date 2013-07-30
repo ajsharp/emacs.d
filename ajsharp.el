@@ -11,6 +11,8 @@
 
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
+
+(setq debug-on-error t)
 (setq require-final-newline t)
 
 (require 'color-theme)
