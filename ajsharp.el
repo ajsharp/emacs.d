@@ -1,13 +1,6 @@
 
-;; ===== Package Management
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-;;(add-to-list 'load-path "~/.emacs.d/plugins/nav")
 (add-to-list 'load-path "~/.emacs.d/ajsharp/anything")
-;; (add-to-list 'load-path "~/.emacs.d/ajsharp/scala-mode")
-;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum")
-;; (add-to-list 'load-path "~/.emacs.d/ajsharp/linum+")
+(add-to-list 'load-path "~/.emacs.d/ajsharp/custom")
 
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
@@ -42,7 +35,6 @@
 (require 'eproject)
 (require 'eproject-extras)
 (require 'autopair)
-;; (require 'scala-mode)
 (require 'smooth-scrolling)
 ;; (require 'centered-cursor-mode)
 (require 'browse-kill-ring)
@@ -110,7 +102,7 @@
 ;; 
 ;; (eval-after-load "color-theme" '(color-theme-tomorrow-night))
 
-;; coffeescript
+;; ======== coffeescript
 (require 'flymake-coffee)
 (add-hook 'coffee-mode-hook 'flymake-coffee-load)
 (setq coffee-tab-width 2)
@@ -332,3 +324,6 @@
 (if (file-exists-p (concat user-specific-dir "/key-bindings.el"))
     (load (concat user-specific-dir "/key-bindings.el"))
   )
+
+;; LOAD CUSTOM CONFIG FILES
+(load "go-config.el")
